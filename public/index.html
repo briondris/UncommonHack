@@ -23,7 +23,11 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="/channel/bcsocket.js"></script>
+    <script src="/javascripts/ImageEdit.js"></script>
+    <script src="/javascripts/FileSaver.js"></script>
+     <script src="/javascripts/FileUpload.js"></script>
     <script src="/share/share.js"></script>
     <script src="./javascripts/jsondiffpatch.min.js"></script>
     <script src="/share/json.js"></script>
@@ -41,13 +45,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">PlaySketch</a>
+          <a class="navbar-brand" href="#">UnCommonHack</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <!--<li class="active"><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>-->
           </ul>
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
@@ -62,7 +66,7 @@
             <button id="toggle_nav" type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
           </p>
           <div class="jumbotron">
-            <h3>ShareJS + Fabric.js Sketch Demo</h3>
+            <h3>Vision Borad</h3>
             <canvas id="c" width="500" height="500" style="border:1px solid #aaa"></canvas>
           </div>
           <div class="row">
@@ -72,6 +76,12 @@
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
           <h4>Canvas Controls</h4>
           <div class="btn-group-vertical">
+            <input id="b" type="button" value="save as Image">
+</input> 
+<input id="file" type="file" accept="image/*">
+ <script>
+   document.getElementById('file').addEventListener('change', readFile);
+ </script>
             <button id="drawing-mode" class="btn btn-default">Cancel drawing mode</button>
             <button id="erase-mode" class="btn btn-default">Enter erase mode</button>
             <button id="undo" class="btn btn-default">Undo</button>
@@ -116,9 +126,9 @@
 
       <hr>
 
-      <footer>
+      <!--<footer>
         <p>&copy; Andrew Beng 2013</p>
-      </footer>
+      </footer>-->
 
     </div><!--/.container-->
 
